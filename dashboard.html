@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="admin.css">
+<div class="card">
+  <h3>Set Colour Result</h3>
+  <select id="r"><option>RED</option><option>GREEN</option><option>VIOLET</option></select>
+  <button onclick="localStorage.setItem('result',JSON.stringify(r.value))">Set</button>
+</div>
+<script>if(!localStorage.admin)location='login.html'</script><link rel="stylesheet" href="../style.css">
+<div class="card">
+  <h3>Set Result (Number)</h3>
+  <select id="num">
+    <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+    <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+  </select>
+  <button class="btn" onclick="setResult()">SET</button>
+  <p id="show"></p>
+</div>
+
+<script>
+if(!localStorage.admin) location='login.html';
+function setResult(){
+  let n=+num.value;
+  let c=(n==0||n==5)?"VIOLET":(n%2==0?"RED":"GREEN");
+  localStorage.setItem("resultNumber",JSON.stringify(n));
+  localStorage.setItem("resultColor",JSON.stringify(c));
+  show.innerText=`Result Locked: ${n} / ${c}`;
+}
+</script>

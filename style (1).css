@@ -1,0 +1,23 @@
+body{margin:0;font-family:Arial;background:#0f0f0f;color:#fff;text-align:center}
+.card{background:#1b1b1b;margin:12px;padding:12px;border-radius:10px}
+.btn{padding:10px 16px;border:none;border-radius:8px;background:#28a745;color:#fff}
+.btn.red{background:#dc3545}.btn.green{background:#28a745}.btn.violet{background:#6f42c1}
+input,select{padding:10px;border-radius:8px;border:1px solid #333;background:#111;color:#fff;margin:6px}
+a{color:#ffc107;text-decoration:none}.timer-wrap{display:flex;justify-content:center;margin:10px}
+.circle{
+  width:120px;height:120px;border-radius:50%;
+  border:10px solid #333;position:relative
+}
+.circle::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  border:10px solid #28a745;
+  animation:spin linear forwards;
+}
+#time{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}body{background:#0f0f0f;color:#fff;font-family:Arial}
+.card{background:#1b1b1b;margin:12px;padding:12px;border-radius:10px}
+.btn{padding:10px 14px;border:none;border-radius:8px;color:#fff}
+.red{background:#dc3545}.green{background:#28a745}.violet{background:#6f42c1}
+input,select{padding:10px;border-radius:8px;background:#111;color:#fff;border:1px solid #333}
+.nums button{margin:4px;padding:8px}
+.row{font-size:14px}

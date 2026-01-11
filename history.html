@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="style.css">
+<div class="card"><h3>History</h3><div id="hist"></div></div>
+<script src="app.js"></script><script>loadHistory()</script><link rel="stylesheet" href="style.css">
+<div class="card">
+  <h3>Bet History</h3>
+  <div id="list"></div>
+</div>
+<script>
+const u=JSON.parse(localStorage.getItem("me"));
+list.innerHTML=u.h.map(x=>`
+  <div class="row">
+    <b>${x.time}</b><br>
+    Bet ₹${x.betAmount} | Pick C:${x.pick.color||"-"} N:${x.pick.number??"-"}<br>
+    Result ${x.result.number}/${x.result.color} |
+    ${x.status} ${x.payout? "₹"+x.payout:""}
+  </div><hr>
+`).join("");
+</script>

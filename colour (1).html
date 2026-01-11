@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="style.css">
+<div class="card">
+  <h3>Colour Trading</h3>
+  <button class="btn red" onclick="bet('RED')">RED</button>
+  <button class="btn green" onclick="bet('GREEN')">GREEN</button>
+  <button class="btn violet" onclick="bet('VIOLET')">VIOLET</button><br><br>
+  <input id="amt" placeholder="Bet Amount">
+  <button class="btn" onclick="play()">Play</button>
+</div>
+<script src="app.js"></script><link rel="stylesheet" href="style.css">
+
+<div class="card">
+  <h3>Colour + Number Trading</h3>
+
+  <!-- TIMER -->
+  <div class="timer-wrap">
+    <div class="circle"><div id="time">30</div></div>
+  </div>
+  <select id="mode">
+    <option value="30">30 Seconds</option>
+    <option value="60">1 Minute</option>
+  </select>
+
+  <!-- BET -->
+  <p>Colour</p>
+  <button class="btn red" onclick="betColorFn('RED')">RED</button>
+  <button class="btn green" onclick="betColorFn('GREEN')">GREEN</button>
+  <button class="btn violet" onclick="betColorFn('VIOLET')">VIOLET</button>
+
+  <p>Number</p>
+  <div>
+    <button onclick="betNumFn(0)">0</button><button onclick="betNumFn(1)">1</button>
+    <button onclick="betNumFn(2)">2</button><button onclick="betNumFn(3)">3</button>
+    <button onclick="betNumFn(4)">4</button><button onclick="betNumFn(5)">5</button>
+    <button onclick="betNumFn(6)">6</button><button onclick="betNumFn(7)">7</button>
+    <button onclick="betNumFn(8)">8</button><button onclick="betNumFn(9)">9</button>
+  </div>
+
+  <input id="amt" placeholder="Bet Amount">
+  <button class="btn" onclick="placeBet()">Place Bet</button>
+</div>
+
+<script src="app.js"></script>
+<script>startPeriod()</script> <link rel="stylesheet" href="style.css">
+<div class="card">
+  <h3>Colour + Number Trading</h3>
+
+  <p>Select Colour</p>
+  <button class="btn red" onclick="pickColor('RED')">RED</button>
+  <button class="btn green" onclick="pickColor('GREEN')">GREEN</button>
+  <button class="btn violet" onclick="pickColor('VIOLET')">VIOLET</button>
+
+  <p>Select Number</p>
+  <div class="nums">
+    <button onclick="pickNum(0)">0</button><button onclick="pickNum(1)">1</button>
+    <button onclick="pickNum(2)">2</button><button onclick="pickNum(3)">3</button>
+    <button onclick="pickNum(4)">4</button><button onclick="pickNum(5)">5</button>
+    <button onclick="pickNum(6)">6</button><button onclick="pickNum(7)">7</button>
+    <button onclick="pickNum(8)">8</button><button onclick="pickNum(9)">9</button>
+  </div>
+
+  <input id="amt" placeholder="Bet Amount">
+  <button class="btn" onclick="play()">PLAY</button>
+</div>
+
+<script src="app.js"></script>
